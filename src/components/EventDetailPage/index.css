@@ -1,0 +1,19 @@
+.event-detail-title {
+    margin-bottom: 0px;
+}
+
+.event-casual-name {
+    margin-bottom: 30px;
+}
+
+.guidelines-container {
+    list-style-type: disc;
+    padding-left: 20px;
+    /* display: flex;
+    justify-content: start; */
+}
+
+.guideline-item {
+    list-style-type: disc;
+    text-align: start;
+}

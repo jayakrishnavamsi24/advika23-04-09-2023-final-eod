@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+// import React, { useEffect, useState } from "react";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import EventDetailPage from './components/EventDetailPage'
+import EventsPage from './components/EventsPage';
+import Aboutadvika from "./components/Aboutadvika";
+import Home from "./components/Home";
 
-function App() {
+const App = () => {
+  // const [isLoading, setIsLoading] = useState(true);
+
+  // useEffect(() => {
+  //   const loadingTimeout = setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 1000);
+
+  //   return () => {
+  //     clearTimeout(loadingTimeout);
+  //   };
+  // }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about-advika" component={Aboutadvika} />
+        <Route exact path="/eventslist/:id" component={EventsPage} />
+        <Route exact path="/eventdetails/:id" component={EventDetailPage} />
+        <Redirect to="/" />
+      </Switch>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
