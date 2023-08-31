@@ -1,0 +1,35 @@
+.timer-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    max-width: 400px;
+    background-color: hsl(38, 61%, 73%);
+    z-index: 100;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 7px;
+    border-radius: 15px;
+}
+
+.timer-title {
+    color: black;
+    text-align: center;
+}
+
+.timerr {
+    font-size: 20px;
+    text-align: center;
+    color: green;
+}
+
+@media screen and (min-width: 768px) {
+    .timer-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .timerr {
+        margin-left: 20px;
+    }
+}

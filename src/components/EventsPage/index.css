@@ -8,6 +8,10 @@
   border-bottom: 0.1px solid rgb(249, 247, 247);
 }
 
+.advika-logo-img {
+  width: 80px;
+}
+
 .event-cards-container {
   min-height: 40vh;
   display: flex;

@@ -151,13 +151,13 @@ const EventsPage = (props) => {
 
           <div className="topbar-item item-2">
             <div className="icon">
-              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+              <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
             </div>
 
             <span className="span">September 14 & 15, 2023</span>
           </div>
 
-          <a href="tel:+11234567890" className="topbar-item link">
+          {/* <a href="tel:+11234567890" className="topbar-item link">
             <div className="icon">
               <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
             </div>
@@ -165,14 +165,14 @@ const EventsPage = (props) => {
             <span className="span">+1 123 456 7890</span>
           </a>
 
-          <div className="separator"></div>
+          <div className="separator"></div> */}
 
-          <a href="mailto:booking@restaurant.com" className="topbar-item link">
+          <a href="mailto:advika2k23@aknu.edu.in" className="topbar-item link">
             <div className="icon">
               <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
             </div>
 
-            <span className="span">advika23@gmail.com</span>
+            <span className="span">advika2k23@aknu.edu.in</span>
           </a>
         </div>
       </div>
@@ -185,9 +185,8 @@ const EventsPage = (props) => {
         <div className="container">
           <a href="/" className="logo">
             <img
-              src="https://res.cloudinary.com/dxq3pj438/image/upload/v1691839571/logo-1_jbqbj0.png"
-              width="160"
-              height="50"
+              src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1693133777/Advika_Logo-cropped_ptohco.png"
+              className="advika-logo-img"
               alt="Grilli - Home"
             />
           </a>
@@ -203,7 +202,7 @@ const EventsPage = (props) => {
 
             <a href="/" className="logo">
               <img
-                src="https://res.cloudinary.com/dxq3pj438/image/upload/v1691839571/logo-1_jbqbj0.png"
+                src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1693133777/Advika_Logo-cropped_ptohco.png"
                 width="160"
                 height="50"
                 alt="Grilli - Home"
@@ -212,7 +211,7 @@ const EventsPage = (props) => {
 
             <ul className="navbar-list">
               <li className="navbar-item">
-                <a href="#home" className="navbar-link hover-underline active">
+                <a href="/#home" className="navbar-link hover-underline active">
                   <div className="separator"></div>
 
                   <span className="span">Home</span>
@@ -220,15 +219,7 @@ const EventsPage = (props) => {
               </li>
 
               <li className="navbar-item">
-                <a href="#events" className="navbar-link hover-underline">
-                  <div className="separator"></div>
-
-                  <span className="span">Events</span>
-                </a>
-              </li>
-
-              <li className="navbar-item">
-                <a href="#about" className="navbar-link hover-underline">
+                <a href="/#about" className="navbar-link hover-underline">
                   <div className="separator"></div>
 
                   <span className="span">About Us</span>
@@ -236,7 +227,7 @@ const EventsPage = (props) => {
               </li>
 
               <li className="navbar-item">
-                <a href="#about-fest" className="navbar-link hover-underline">
+                <a href="/#about-fest" className="navbar-link hover-underline">
                   <div className="separator"></div>
 
                   <span className="span">About Fest</span>
@@ -244,7 +235,15 @@ const EventsPage = (props) => {
               </li>
 
               <li className="navbar-item">
-                <a href="#contact" className="navbar-link hover-underline">
+                <a href="/#events" className="navbar-link hover-underline">
+                  <div className="separator"></div>
+
+                  <span className="span">Events</span>
+                </a>
+              </li>
+
+              <li className="navbar-item">
+                <a href="/#contact" className="navbar-link hover-underline">
                   <div className="separator"></div>
 
                   <span className="span">Contact</span>
@@ -356,12 +355,12 @@ const EventsPage = (props) => {
         <p className="copyright">
           &copy; 2023 Advika. All Rights Reserved | Crafted by{" "}
           <a
-            href="https://github.com/deepakramu7"
+            href="https://www.aknu.edu.in/UCE/cse.php"
             target="_blank"
             rel="noopener noreferrer"
             className="link"
           >
-            Deepak
+            Department of Computer Science and Engineering
           </a>
         </p>
       </footer>

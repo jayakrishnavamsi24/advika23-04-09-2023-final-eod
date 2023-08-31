@@ -1,19 +1,38 @@
 .event-detail-title {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .event-casual-name {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.guidelines-outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .guidelines-container {
-    list-style-type: disc;
-    padding-left: 20px;
-    /* display: flex;
+  list-style-type: disc;
+  padding-left: 20px;
+  width: 100%;
+  max-width: 700px;
+  font-size: 18px;
+  /* display: flex;
     justify-content: start; */
 }
 
 .guideline-item {
-    list-style-type: disc;
-    text-align: start;
+  list-style-type: disc;
+  text-align: start;
+}
+
+.guideline-hightlight {
+  color: rgb(210, 177, 76);
+}
+
+@media screen and (min-width: 768px) {
+  .guidelines-container {
+    font-size: 20px;
+  }
 }

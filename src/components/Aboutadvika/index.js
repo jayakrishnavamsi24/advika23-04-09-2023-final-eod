@@ -1,20 +1,11 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 import "./index.css";
 // import "../Home/index.css";
 
 const Aboutadvika = () => {
-  // HERO SLIDER
-  // const heroSlider = document.querySelector("[data-hero-slider]");
-
-  // addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", function () {
-  //   clearInterval(autoSlideInterval);
-  // });
-
-  // addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseout", autoSlide);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -131,7 +122,7 @@ const Aboutadvika = () => {
 
           <div className="separator"></div>
 
-          <a href="mailto:booking@restaurant.com" className="topbar-item link">
+          <a href="mailto:advika23@gmail.com" className="topbar-item link">
             <div className="icon">
               <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
             </div>
@@ -330,8 +321,8 @@ const Aboutadvika = () => {
         className="about-advika-footer"
       >
         <p className="copyright">
-          &copy; 2023 Advika. All Rights Reserved | Crafted by{" "}
-          <a
+          &copy; 2023 Advika. All Rights Reserved | Crafted by Department of Computer Science and Engineering
+          {/* <a
             href="https://github.com/deepakramu7"
             target="_blank"
             rel="noopener noreferrer"
@@ -339,6 +330,15 @@ const Aboutadvika = () => {
           >
             Deepak
           </a>
+          {" & "}
+          <a
+            href="https://github.com/jayakrishnavamsi24"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link"
+          >
+            Jaya Krishna Vamsi
+          </a> */}
         </p>
       </footer>
 

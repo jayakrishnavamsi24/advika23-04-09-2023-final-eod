@@ -169,8 +169,8 @@ html {
 }
 
 .home-page-container {
+  color: #ffffff;
   background-color: var(--eerie-black-1);
-  color: var(--white);
   font-family: var(--fontFamily-dm_sans);
   font-size: var(--fontSize-body-4);
   font-weight: var(--weight-regular);
@@ -272,6 +272,26 @@ html {
   font-size: var(--fontSize-label-2);
 }
 
+.advika-logo-img {
+  width: 80px;
+}
+
+.card-content {
+  margin-top: -20px;
+}
+
+.margin-btm-register {
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 991px) {
+  .margin-top-events-section {
+    margin-top: -70px;
+  }
+
+}
+
+
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
@@ -327,6 +347,8 @@ html {
 .text-center {
   text-align: center;
 }
+
+
 
 .img-cover {
   width: 100%;
@@ -911,6 +933,21 @@ html {
   animation: smoothScale 7s linear forwards;
 }
 
+.slider-bg {
+  position: relative;
+  width: 100%;
+  height: 950px; /* Adjust the height as needed */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black color */
+}
+
 @keyframes smoothScale {
   0% {
     transform: scale(1);
@@ -1003,6 +1040,10 @@ html {
   #SERVICE
 \*-----------------------------------*/
 
+/* .events-underline {
+  text-decoration: dashed underline;
+} */
+
 .service .section-title {
   margin-block-end: 16px;
 }
@@ -1013,6 +1054,10 @@ html {
 
 .service-card {
   overflow: hidden;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .service-card .has-before {
@@ -1027,10 +1072,10 @@ html {
   transform: translateX(-50%);
   width: 140px;
   height: 100%;
-  background-image: url("../../../public/images/img-pattern.svg");
+  /* background-image: url("../../../public/images/img-pattern.svg");
   background-position: center;
   background-size: cover;
-  background-repeat: repeat;
+  background-repeat: repeat; */
   transition: var(--transition-2);
   transition-delay: 0;
   z-index: -1;
@@ -1062,6 +1107,12 @@ html {
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
+
+.events-container-all {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 .about .section-text {
   margin-block: 15px 30px;
@@ -1124,6 +1175,74 @@ html {
   background-size: contain;
   animation: rotate360 15s linear infinite;
 }
+
+.carousel-college {
+  /* background-color: red; */
+  padding: 30px;
+  width: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.carousel-img {
+  width: 100%;
+}
+
+.about-aknu-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.about-aknu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.small-screen-display-none {
+  display: none;
+}
+
+.pding {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .big-screen-display-none {
+    display: none;
+  }
+
+  .small-screen-display-none {
+    display: block;
+  }
+
+  .about-aknu {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .about-aknu-section {
+    flex-direction: row;
+    padding: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .carousel-college {
+    width: 40%;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+  }
+
+}
+
 
 /*-----------------------------------*\
   #SPECIAL DISH
@@ -1251,207 +1370,6 @@ html {
 .menu .shape-3 {
   bottom: 0;
   right: 0;
-}
-
-/*-----------------------------------*\
-  #TESTIMONIALS
-\*-----------------------------------*/
-
-.testi {
-  padding-block-end: 340px;
-  position: static;
-}
-
-.testi .quote {
-  font-size: 7rem;
-  font-family: var(--fontFamily-forum);
-  line-height: 0.7em;
-}
-
-.testi .wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 2px;
-  margin-block: 40px 50px;
-}
-
-.testi .separator {
-  animation: rotate360 15s linear infinite;
-}
-
-.profile .img {
-  margin-inline: auto;
-  border-radius: var(--radius-circle);
-  margin-block-end: 15px;
-}
-
-.testi .profile-name {
-  color: var(--gold-crayola);
-  font-weight: var(--weight-bold);
-  text-transform: uppercase;
-  letter-spacing: var(--letterSpacing-3);
-}
-
-/*-----------------------------------*\
-  #RESERVATION
-\*-----------------------------------*/
-
-.reservation-form {
-  margin-block-start: -270px;
-}
-
-.form-text {
-  margin-block-end: 40px;
-}
-
-.form-text .link {
-  display: inline;
-  color: var(--gold-crayola);
-}
-
-.form-right .headline-1 {
-  margin-block-end: 40px;
-}
-
-.form-right .contact-label {
-  margin-block-end: 5px;
-}
-
-.form-right .separator {
-  margin: 20px auto;
-}
-
-.form-right .body-4 {
-  color: var(--quick-silver);
-  line-height: var(--lineHeight-3);
-}
-
-.form-right .body-4:not(:last-child) {
-  margin-block-end: 25px;
-}
-
-.form-left,
-.form-right {
-  padding: 40px 20px 30px;
-}
-
-.input-field[type="date"] {
-  text-transform: uppercase;
-  padding-inline-end: 10px;
-}
-
-.input-field[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-}
-
-textarea.input-field {
-  resize: none;
-  height: 140px;
-  padding-block: 20px;
-  line-height: var(--lineHeight-1);
-}
-
-.form-left .btn {
-  max-width: 100%;
-  width: 100%;
-}
-
-.form-right {
-  background-repeat: repeat;
-  background-position: top left;
-}
-
-/*-----------------------------------*\
-  #FEATURES
-\*-----------------------------------*/
-
-.features .section-title {
-  margin-block-end: 40px;
-}
-
-.feature-card {
-  padding: 30px 20px 40px;
-}
-
-.feature-item:nth-child(2n + 1) .feature-card {
-  background-color: var(--eerie-black-3);
-}
-
-.feature-item:nth-child(2n) .feature-card {
-  background-color: var(--smoky-black-3);
-}
-
-.feature-card .card-icon {
-  max-width: max-content;
-  margin-inline: auto;
-  transition: var(--transition-2);
-}
-
-.feature-card:hover .card-icon {
-  transform: scale(-1) rotate(180deg);
-}
-
-.feature-card .card-title {
-  margin-block: 20px;
-}
-
-.feature-card .card-text {
-  color: var(--quick-silver);
-  line-height: var(--lineHeight-6);
-}
-
-/*-----------------------------------*\
-  #EVENT
-\*-----------------------------------*/
-
-.event .section-title {
-  margin-block-end: 40px;
-}
-
-.event-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.event-card .card-content {
-  background-image: var(--gradient-1);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 35px 35px 25px;
-}
-
-.event-card .publish-date {
-  position: absolute;
-  top: 30px;
-  left: 25px;
-  padding: 5px 10px;
-  color: var(--gold-crayola);
-  background-color: var(--black);
-  font-weight: var(--weight-bold);
-  letter-spacing: var(--letterSpacing-1);
-  line-height: 14px;
-}
-
-.event-card .card-subtitle {
-  color: var(--gold-crayola);
-  text-transform: uppercase;
-  font-weight: var(--weight-bold);
-  letter-spacing: var(--letterSpacing-2);
-  margin-block-end: 5px;
-}
-
-.event-card .card-banner .img-cover {
-  transition: var(--transition-2);
-}
-
-.event-card:is(:hover, :focus-within) .img-cover {
-  transform: scale(1.05);
-}
-
-.event .btn {
-  margin-inline: auto;
-  margin-block-start: 40px;
 }
 
 /*-----------------------------------*\
@@ -1600,15 +1518,6 @@ textarea.input-field {
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
-
-/* @media (min-width: 320px){
-    .about .container {
-        gap: 40px;
-    }
-    .about-banner>.w-100 {
-        padding-inline-start: 50px;
-    }
-} */
 
 /**
  * responsive for larger than 575px screen
