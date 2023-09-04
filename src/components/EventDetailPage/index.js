@@ -322,7 +322,7 @@ Aptitude & Reasoning
       </li>
       <li className="guideline-item">
         <p>
-        The event comprises two rounds. 
+        The event comprises two rounds.{" "} 
         <span className="guideline-hightlight" style={{ display: "inline" }}>
         Rounds 1
           </span>
@@ -365,75 +365,130 @@ scoring above the cutoff will proceed to the next round.
   const getArguTechData = () => (
     <>
       <li className="guideline-item">
-        <p>The competition is open only to registered members of the event.</p>
+        <p>Only registered members are allowed to participate in the debate.</p>
       </li>
       <li className="guideline-item">
         <p>
-          Each presentation team should consist of a{" "}
+        Each team must consist of{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-            maximum of two (2) members.
+          three (3) members
           </span>
+          .
         </p>
       </li>
       <li className="guideline-item">
         <p>
-          The{" "}
+        The debate{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
             theme
           </span>{" "}
-          of the presentation must revolve around{" "}
+          is{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-            "Blue Eyes Technology"
+            "Is technology making things worse or better?"
           </span>
         </p>
       </li>
       <li className="guideline-item">
         <p>
-          Plagiarism is strictly prohibited. All content must be original and
-          properly cited.
+        The event comprises two rounds.
         </p>
       </li>
       <li className="guideline-item">
-        <p>
-          The presentation should not exceed a duration of{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-            7 minutes
+            Round 1: (Written Test)
           </span>
-          .
+          <li className="sub-guideline-item">
+            <p>
+              Participants will be given{" "}
+            <span className="guideline-hightlight" style={{ display: "inline" }}>
+              one hour {" "}
+            </span>
+            to {" "}
+            <span className="guideline-hightlight" style={{ display: "inline" }}>
+              write their views on the topic 
+            </span>
+            .
+            </p>
+          </li>
+          <li className="sub-guideline-item">
+            <p>
+              The written test format includes:
+              <li className="sub-sub-guideline-item">
+                <p>Opening Statement for either the Pro or Con side (as chosen by the participant).</p>
+              </li>
+              <li className="sub-sub-guideline-item">
+                <p>Ten (10) facts to support or oppose the chosen side.</p>
+              </li>
+              <li className="sub-sub-guideline-item">
+                <p>Conclusion summarizing their views.</p>
+              </li>
+            </p>
+          </li>
+      </li>
+      <li className="guideline-item">
+        <p>
+          The best submissions will be selected to advance to the second round.
         </p>
       </li>
       <li className="guideline-item">
         <p>
-          Presentations must be in the PowerPoint{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-            (PPT/PPTX) format
+            Round 2:
           </span>
-          .
+          <li className="guideline-item margin">
+            <p>
+              The second round will involve one team debating against another team.
+            </p>
+          </li>
         </p>
       </li>
       <li className="guideline-item">
         <p>
-          The{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-            maximum
-          </span>{" "}
-          number of{" "}
-          <span className="guideline-hightlight" style={{ display: "inline" }}>
-            12
-          </span>{" "}
-          slides will be allowed for the presentation.
+            Debate Format:
+          </span>
+          <ul>
+            <li className="numbers-list">
+              <p>
+              Team Introductions (2 minutes)
+              </p>
+            </li>
+            <li className="numbers-list">
+              <p>
+              Pro Speaker (up to three (3) minutes):
+              </p>
+              <ul>
+              <li className="sub-sub-guideline-item">
+                <p>All three team members must participate.</p>
+              </li>
+              </ul>
+            </li>
+            <li className="numbers-list">
+              <p>
+              Con Speaker (up to three (3) minutes):
+              </p>
+              <ul>
+                <li className="sub-sub-guideline-item">
+                  <p>All three team members must participate.</p>
+                </li>
+              </ul>              
+            </li>
+            <li className="numbers-list">
+              <p>
+              Pro Rebuttal (up to two (2) minutes)
+              </p>
+            </li>
+            <li className="numbers-list">
+              <p>
+              Con Rebuttal (up to two (2) minutes)
+              </p>
+            </li>
+          </ul>          
         </p>
       </li>
       <li className="guideline-item">
         <p>
-          All presentations and interactions should be conducted in the English
-          language.
-        </p>
-      </li>
-      <li className="guideline-item">
-        <p>
-          Participants are required to bring their presentations on a pen drive
-          for technical setup.
+        The debate will be conducted in English only
         </p>
       </li>
     </>
@@ -501,9 +556,9 @@ credits
         <p>
         Submit the film in the specified{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-            filr format
+            file format
           </span>{" "}
-          {" "}  (e.g.,
+          {" "}  (e.g., {" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
           MP4, MOV
           </span>{" "}
@@ -515,7 +570,7 @@ credits
         Video quality should be{" "}
         <span className="guideline-hightlight" style={{ display: "inline" }}>
         720p or 1080p
-          </span>{" "}
+          </span>
           .
            </p>
       </li>
@@ -524,7 +579,7 @@ credits
         The submission {" "}
         <span className="guideline-hightlight" style={{ display: "inline" }}>
         deadline is at 12:00 PM September 13, 2023
-          </span>{" "}
+          </span>
           .
         </p>
       </li>
@@ -545,32 +600,17 @@ be included.
   const getIdeaNovaData = () => (
     <>
       <li className="guideline-item">
-        <p>The competition is open only to registered members of the event.</p>
+        <p>Participation is open only to registered members.</p>
       </li>
       <li className="guideline-item">
         <p>
-          Each presentation team should consist of a{" "}
-          <span className="guideline-hightlight" style={{ display: "inline" }}>
-            maximum of two (2) members.
-          </span>
+        The presentation theme must involve an innovative idea supported by a well-defined working
+hypothesis.
         </p>
       </li>
       <li className="guideline-item">
         <p>
-          The{" "}
-          <span className="guideline-hightlight" style={{ display: "inline" }}>
-            theme
-          </span>{" "}
-          of the presentation must revolve around{" "}
-          <span className="guideline-hightlight" style={{ display: "inline" }}>
-            "Blue Eyes Technology"
-          </span>
-        </p>
-      </li>
-      <li className="guideline-item">
-        <p>
-          Plagiarism is strictly prohibited. All content must be original and
-          properly cited.
+        Plagiarism is strictly prohibited. All content must be original or properly cited.
         </p>
       </li>
       <li className="guideline-item">
@@ -586,9 +626,9 @@ be included.
         <p>
           Presentations must be in the PowerPoint{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-            (PPT/PPTX) format
+            (PPT/PPTX) {" "}
           </span>
-          .
+          format.
         </p>
       </li>
       <li className="guideline-item">
@@ -601,19 +641,17 @@ be included.
           <span className="guideline-hightlight" style={{ display: "inline" }}>
             12
           </span>{" "}
-          slides will be allowed for the presentation.
+          slides will be allowed.
         </p>
       </li>
       <li className="guideline-item">
         <p>
-          All presentations and interactions should be conducted in the English
-          language.
+          The presentation must be conducted in English.
         </p>
       </li>
       <li className="guideline-item">
         <p>
-          Participants are required to bring their presentations on a pen drive
-          for technical setup.
+          Participants should bring their presentation on a pen drive for technical setup.
         </p>
       </li>
     </>
@@ -622,75 +660,38 @@ be included.
   const getInnovexData = () => (
     <>
       <li className="guideline-item">
-        <p>The competition is open only to registered members of the event.</p>
+        <p>Participation is open only to registered members.</p>
       </li>
       <li className="guideline-item">
         <p>
-          Each presentation team should consist of a{" "}
+          Create an attractive{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-            maximum of two (2) members.
-          </span>
-        </p>
-      </li>
-      <li className="guideline-item">
-        <p>
-          The{" "}
-          <span className="guideline-hightlight" style={{ display: "inline" }}>
-            theme
+          visual display (Poster)
           </span>{" "}
-          of the presentation must revolve around{" "}
+          for your project. 
+        </p>
+      </li>
+      <li className="guideline-item">
+        <p>
+          Follow all provided guidelines to ensure a successful Expo experience. 
+        </p>
+      </li>
+      <li className="guideline-item">
+        <p>
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-            "Blue Eyes Technology"
+            Participants
           </span>
-        </p>
-      </li>
-      <li className="guideline-item">
-        <p>
-          Plagiarism is strictly prohibited. All content must be original and
-          properly cited.
-        </p>
-      </li>
-      <li className="guideline-item">
-        <p>
-          The presentation should not exceed a duration of{" "}
+          {" "}must{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-            7 minutes
+            bring their own equipment
           </span>
-          .
+          {" "}for the project display, extension cords etc and ensure
+its compatibility, reliability, and safety.
         </p>
       </li>
       <li className="guideline-item">
         <p>
-          Presentations must be in the PowerPoint{" "}
-          <span className="guideline-hightlight" style={{ display: "inline" }}>
-            (PPT/PPTX) format
-          </span>
-          .
-        </p>
-      </li>
-      <li className="guideline-item">
-        <p>
-          The{" "}
-          <span className="guideline-hightlight" style={{ display: "inline" }}>
-            maximum
-          </span>{" "}
-          number of{" "}
-          <span className="guideline-hightlight" style={{ display: "inline" }}>
-            12
-          </span>{" "}
-          slides will be allowed for the presentation.
-        </p>
-      </li>
-      <li className="guideline-item">
-        <p>
-          All presentations and interactions should be conducted in the English
-          language.
-        </p>
-      </li>
-      <li className="guideline-item">
-        <p>
-          Participants are required to bring their presentations on a pen drive
-          for technical setup.
+        Participants must label, secure, set up, and remove their equipment within the given time and space.
         </p>
       </li>
     </>
