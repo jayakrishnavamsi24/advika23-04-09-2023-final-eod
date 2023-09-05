@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./index.css";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { saveAs } from 'file-saver';
-import Slider from 'react-slick';
-import EventTimer from '../EventTimer'
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import { saveAs } from "file-saver";
+import Slider from "react-slick";
+import EventTimer from "../EventTimer";
+import Faqs from "../Faqs";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const HomeContent = () => {
   const [currentSlidePos, setCurrentSlidePos] = useState(0);
@@ -139,12 +140,71 @@ const HomeContent = () => {
     };
   }, [currentSlidePos]);
 
+  const faqsList = [
+    {
+      id: 0,
+      questionText: "Who can participate in ADVIKA'23?",
+      answerText:
+        'ADVIKA’23 is open to students from all engineering disciplines and backgrounds. Any UG or PG students passionate about technology and problem-solving is welcome to participate.',
+      isAnsVisible: false,
+    },
+    {
+      id: 1,
+      questionText: "How do I register for ADVIKA’23?",
+      answerText:
+      'You can register for ADVIKA’23 by visiting our web page and following the instructions provided.',
+      isAnsVisible: false,
+    },
+    {
+      id: 2,
+      questionText: "Is there a registration fee for the event? What are the prizes for winners?",
+      answerText:
+      'Yes, there is a nominal registration fee of rupees 200. Exciting cash prizes and certificates will be awarded to the participants and winning teams of the 7 main events in ADVIKA’23.',
+      isAnsVisible: false,
+    },
+    {
+      id: 3,
+      questionText: "Is there a limit to the number of participants from one college?",
+      answerText:
+      'No, there is no specific limit to the number of participants from one college. However, eachparticipant must register individually. (Individual registration is mandatory even from group events).',
+      isAnsVisible: false,
+    },
+    {
+      id: 4,
+      questionText: "How will I receive updates and notifications about the event?",
+      answerText:
+      "Registered participants will receive regular updates and notifications via the email address provided and can also visit the website or instagram page for any kind of updates.",
+      isAnsVisible: false,
+    },
+    {
+      id: 5,
+      questionText: "How can I contact the event organizers if I have more questions?",
+      answerText:
+        "You can reach out to us via [contact email/phone number], and we'll be happy to assist you with any additional questions you may have.",
+      isAnsVisible: false,
+    },
+    {
+      id: 6,
+      questionText: "Is there a deadline for registration?",
+      answerText:
+        'Yes, registration for any event in ADVIKA’23 closes on 12.09.23. Make sure to register before the deadline to secure your participation.',
+      isAnsVisible: false,
+    },
+    {
+      id: 7,
+      questionText: "How will the evaluation process work?",
+      answerText:
+        "The evaluation process will be transparent and fair, with a panel of expert judges assessing participants' performance based on predefined criteria.",
+      isAnsVisible: false,
+    },
+  ]
+
   const downloadBrochure = (event) => {
     event.preventDefault();
-    const pdfFileName = 'advika-brochure-2k23.pdf';
-    const pdfUrl = process.env.PUBLIC_URL + '/' + pdfFileName;
+    const pdfFileName = "advika.pdf";
+    const pdfUrl = process.env.PUBLIC_URL + "/" + pdfFileName;
     saveAs(pdfUrl, pdfFileName);
-  }
+  };
 
   const settings = {
     dots: true,
@@ -152,8 +212,8 @@ const HomeContent = () => {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,        
-    autoplaySpeed: 3000,  
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
 
   return (
@@ -180,7 +240,7 @@ const HomeContent = () => {
 
           <div className="topbar-item item-2">
             <div className="icon">
-            <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+              <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
             </div>
 
             <span className="span">September 14 & 15, 2023</span>
@@ -214,7 +274,7 @@ const HomeContent = () => {
         <div className="container">
           <a href="/" className="logo">
             <img
-              src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1693133777/Advika_Logo-cropped_ptohco.png"
+              src="https://res.cloudinary.com/die4jnqbu/image/upload/v1693833635/logo_ud5oqm.jpg"
               className="advika-logo-img"
               alt="Grilli - Home"
             />
@@ -231,7 +291,7 @@ const HomeContent = () => {
 
             <a href="/" className="logo">
               <img
-                src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1693133540/Advika_Logo_fade9x.png"
+                src="https://res.cloudinary.com/die4jnqbu/image/upload/v1693833635/logo_ud5oqm.jpg"
                 width="160"
                 height="50"
                 alt="Grilli - Home"
@@ -301,17 +361,14 @@ const HomeContent = () => {
               <div className="separator"></div>
 
               <p className="contact-label">Register</p>
-
-              <a
-                href="tel:+88123123456"
-                className="body-1 contact-number hover-underline"
-              >
-                +1 1234567890
-              </a>
             </div>
           </nav>
 
-          <a href="/" className="btn btn-secondary">
+          <a
+            href="https://forms.gle/CC4CVUb3N46Uxe9T6"
+            target="_blank"
+            className="btn btn-secondary"
+          >
             <span className="text text-1">Register Here</span>
 
             <span className="text text-2" aria-hidden="true">
@@ -361,7 +418,11 @@ const HomeContent = () => {
                   Where curiosity meets innovation
                 </p>
 
-                <a onClick={downloadBrochure} href="#" className="btn btn-primary slider-reveal">
+                <a
+                  onClick={downloadBrochure}
+                  href="#"
+                  className="btn btn-primary slider-reveal"
+                >
                   <span className="text text-1">Download Brochure</span>
 
                   <span className="text text-2" aria-hidden="true">
@@ -390,7 +451,11 @@ const HomeContent = () => {
                   The journey of a thousand miles begins with a single click
                 </p>
 
-                <a onClick={downloadBrochure} href="#" className="btn btn-primary slider-reveal">
+                <a
+                  onClick={downloadBrochure}
+                  href="#"
+                  className="btn btn-primary slider-reveal"
+                >
                   <span className="text text-1">Download Brochure</span>
 
                   <span className="text text-2" aria-hidden="true">
@@ -416,10 +481,15 @@ const HomeContent = () => {
                 </h1>
 
                 <p className="body-2 hero-text slider-reveal">
-                  Education is not the filling of a pail, but the lighting of a fire
+                  Education is not the filling of a pail, but the lighting of a
+                  fire
                 </p>
 
-                <a onClick={downloadBrochure} href="#" className="btn btn-primary slider-reveal">
+                <a
+                  onClick={downloadBrochure}
+                  href="#"
+                  className="btn btn-primary slider-reveal"
+                >
                   <span className="text text-1" style={{ color: "white" }}>
                     Download Brochure
                   </span>
@@ -447,7 +517,11 @@ const HomeContent = () => {
               <ion-icon name="chevron-forward"></ion-icon>
             </button>
 
-            <a href="/" className="hero-btn has-after">
+            <a
+              href="https://forms.gle/CC4CVUb3N46Uxe9T6"
+              target="_blank"
+              className="hero-btn has-after"
+            >
               <img
                 src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1692448346/hero-icon_xlnstj.png"
                 width="48"
@@ -464,70 +538,95 @@ const HomeContent = () => {
       --> */}
 
           <section
-          className="about-aknu-section text-center"
-          aria-labelledby="about-label"
+            className="about-aknu-section text-center"
+            aria-labelledby="about-label"
             id="about"
           >
             <div className="about-aknu">
-                <p className="label-2 section-subtitle" id="about-label">
-                  About Us
-                </p>
+              <p className="label-2 section-subtitle" id="about-label">
+                About Us
+              </p>
 
-                <h2 className="headline-1 section-title">
-                  Adikavi Nannaya University
-                </h2>
+              <h2 className="headline-1 section-title">
+                Adikavi Nannaya University
+              </h2>
 
-                <p className="section-text small-screen-display-none">
-                  Established in 2006, Adikavi Nannaya University caters to East
-                  & West Godavari districts of Andhra Pradesh. Committed to
-                  holistic education, it blends cultural values with modernity.
-                  With four main colleges, extension campuses, and affiliations
-                  with nearly 450 colleges, the university focuses on academic
-                  excellence, innovative research, and industry integration.
-                </p>
+              <p className="section-text small-screen-display-none">
+                Established in 2006, Adikavi Nannaya University caters to East &
+                West Godavari districts of Andhra Pradesh. Committed to holistic
+                education, it blends cultural values with modernity. With four
+                main colleges, extension campuses, and affiliations with nearly
+                450 colleges, the university focuses on academic excellence,
+                innovative research, and industry integration.
+              </p>
 
-                <a href="https://aknu.edu.in/" target="_blank" rel="noopener noreferrer" className="btn btn-primary pding small-screen-display-none">
-                  <span className="text text-1">Visit Site</span>
+              <a
+                href="https://aknu.edu.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary pding small-screen-display-none"
+              >
+                <span className="text text-1">Visit Site</span>
 
-                  <span className="text text-2" aria-hidden="true">
+                <span className="text text-2" aria-hidden="true">
                   Visit Site
-                  </span>
-                </a>
-                
+                </span>
+              </a>
             </div>
             <div className="carousel-college">
               <Slider {...settings}>
                 <div>
-                  <img className="carousel-img" src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1693135296/University_Gate_fiedri.png" alt="Slide 1" />
+                  <img
+                    className="carousel-img"
+                    src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1693135296/University_Gate_fiedri.png"
+                    alt="Slide 1"
+                  />
                 </div>
                 <div>
-                  <img className="carousel-img" src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1693134638/AKNU_Library_jjqdiq.jpg" alt="Slide 2" />
+                  <img
+                    className="carousel-img"
+                    src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1693134638/AKNU_Library_jjqdiq.jpg"
+                    alt="Slide 2"
+                  />
                 </div>
                 <div>
-                  <img className="carousel-img" src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1693134641/AKNU_N-Block_jrh4yg.jpg" alt="Slide 3" />
+                  <img
+                    className="carousel-img"
+                    src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1693134641/AKNU_N-Block_jrh4yg.jpg"
+                    alt="Slide 3"
+                  />
                 </div>
                 <div>
-                  <img className="carousel-img" src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1693134638/AKNU_Convention_Center_wcuz3q.jpg" alt="Slide 4" />
+                  <img
+                    className="carousel-img"
+                    src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1693134638/AKNU_Convention_Center_wcuz3q.jpg"
+                    alt="Slide 4"
+                  />
                 </div>
               </Slider>
             </div>
             <div className="about-aknu big-screen-display-none">
-                <p className="section-text">
-                  Established in 2006, Adikavi Nannaya University caters to East
-                  & West Godavari districts of Andhra Pradesh. Committed to
-                  holistic education, it blends cultural values with modernity.
-                  With four main colleges, extension campuses, and affiliations
-                  with nearly 450 colleges, the university focuses on academic
-                  excellence, innovative research, and industry integration.
-                </p>
+              <p className="section-text">
+                Established in 2006, Adikavi Nannaya University caters to East &
+                West Godavari districts of Andhra Pradesh. Committed to holistic
+                education, it blends cultural values with modernity. With four
+                main colleges, extension campuses, and affiliations with nearly
+                450 colleges, the university focuses on academic excellence,
+                innovative research, and industry integration.
+              </p>
 
-                <a href="https://aknu.edu.in/" target="_blank" rel="noopener noreferrer" className="btn btn-primary pding">
-                  <span className="text text-1">Visit Site</span>
+              <a
+                href="https://aknu.edu.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary pding"
+              >
+                <span className="text text-1">Visit Site</span>
 
-                  <span className="text text-2" aria-hidden="true">
-                    Visit Site
-                  </span>
-                </a>
+                <span className="text text-2" aria-hidden="true">
+                  Visit Site
+                </span>
+              </a>
             </div>
           </section>
 
@@ -543,9 +642,8 @@ const HomeContent = () => {
             <div className="special-dish-banner">
               <img
                 src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1693499882/pablo-heimplatz-ZODcBkEohk8-unsplash_rnf1ul.jpg"
-                width="940"
-                height="900"
-                loading="lazy"
+                width="950"
+                height="800"
                 alt="special dish"
                 className="img-cover"
               />
@@ -557,7 +655,6 @@ const HomeContent = () => {
                   src="https://res.cloudinary.com/dxq3pj438/image/upload/v1691836053/badge-1_mpxmvi.png"
                   width="28"
                   height="41"
-                  loading="lazy"
                   alt="badge"
                   className="abs-img"
                 />
@@ -567,11 +664,14 @@ const HomeContent = () => {
                 <h2 className="headline-1 section-title">Advika</h2>
 
                 <p className="section-text">
-                      ADVIKA, an annual technical fest held by Adikavi Nannaya University, honors the legacy of Bharat
-                  Ratna Shri Mokshagundam Visweswarayya on Engineer's Day. It serves as a platform for innovation,
-                  collaboration, and knowledge exchange. With its diverse events and workshops, ADVIKA inspires
-                  young minds to explore the realms of technology and engineering. Join us in celebrating the spirit of
-                  ingenuity and progress at this remarkable event.
+                  ADVIKA, an annual technical fest held by Adikavi Nannaya
+                  University, honors the legacy of Bharat Ratna Shri
+                  Mokshagundam Visweswarayya on Engineer's Day. It serves as a
+                  platform for innovation, collaboration, and knowledge
+                  exchange. With its diverse events and workshops, ADVIKA
+                  inspires young minds to explore the realms of technology and
+                  engineering. Join us in celebrating the spirit of ingenuity
+                  and progress at this remarkable event.
                 </p>
 
                 {/* <Link to="/about-advika" className="btn btn-primary">
@@ -621,7 +721,6 @@ const HomeContent = () => {
                             src="https://res.cloudinary.com/dxq3pj438/image/upload/v1691833580/dose-media-DiTiYQx0mh4-unsplash_exztqc.jpg"
                             width="285"
                             height="336"
-                            loading="lazy"
                             alt="Technical"
                             className="img-cover"
                           />
@@ -630,7 +729,7 @@ const HomeContent = () => {
 
                       <div className="card-content">
                         <h3 className="title-4 card-title">
-                          <a href="/">Technical</a>
+                          <a href="/">Main Events</a>
                         </h3>
 
                         <a
@@ -656,7 +755,6 @@ const HomeContent = () => {
                             src="https://res.cloudinary.com/dxq3pj438/image/upload/v1691833583/sigmund-vPtbBNlKRBw-unsplash_x05fed.jpg"
                             width="285"
                             height="336"
-                            loading="lazy"
                             alt="Appetizers"
                             className="img-cover"
                           />
@@ -665,7 +763,7 @@ const HomeContent = () => {
 
                       <div className="card-content">
                         <h3 className="title-4 card-title">
-                          <a href="/">Non-Tech</a>
+                          <a href="/">Games Gala</a>
                         </h3>
 
                         <a
@@ -691,7 +789,6 @@ const HomeContent = () => {
                             src="https://res.cloudinary.com/dxq3pj438/image/upload/v1691833650/anthony-delanoix-hzgs56Ze49s-unsplash_qddd9w.jpg"
                             width="285"
                             height="336"
-                            loading="lazy"
                             alt="Drinks"
                             className="img-cover"
                           />
@@ -700,7 +797,7 @@ const HomeContent = () => {
 
                       <div className="card-content">
                         <h3 className="title-4 card-title">
-                          <a href="/">Extra-curriculars</a>
+                          <a href="/">Cultural Enigma</a>
                         </h3>
 
                         <a
@@ -723,11 +820,13 @@ const HomeContent = () => {
         </article>
       </main>
 
+      {<Faqs faqsList={faqsList}/>}
+
+
       {/* <!-- 
     - #FOOTER
   --> */}
-
-<footer
+      <footer
         id="contact"
         className="footer section has-bg-image text-center"
         style={{
@@ -743,15 +842,14 @@ const HomeContent = () => {
             <div className="footer-brand has-before has-after">
               <a href="/" className="logo">
                 <img
-                  src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1693133777/Advika_Logo-cropped_ptohco.png"
+                  src="https://res.cloudinary.com/die4jnqbu/image/upload/v1693833635/logo_ud5oqm.jpg"
                   width="80"
                   height="50"
-                  loading="lazy"
                   alt="grilli home"
                 />
               </a>
 
-              <address className="body-4">Advika 2K23</address>
+              <address className="body-4">Advika'23</address>
 
               <a
                 href="mailto:advika2k23@aknu.edu.in"
@@ -774,7 +872,9 @@ const HomeContent = () => {
                 <div className="separator"></div>
               </div>
 
-              <p className="title-1 margin-btm-register">Register to participate</p>
+              <p className="title-1 margin-btm-register">
+                Register to participate
+              </p>
 
               <p className="label-1">
                 Come and make this event{" "}
@@ -850,17 +950,7 @@ const HomeContent = () => {
 
               <li>
                 <a
-                  href="/"
-                  className="label-2 footer-link hover-underline"
-                  target="_blank"
-                >
-                  Twitter
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="/"
+                  href="https://www.youtube.com/@nannayanewstv"
                   className="label-2 footer-link hover-underline"
                   target="_blank"
                 >
@@ -870,7 +960,7 @@ const HomeContent = () => {
 
               <li>
                 <a
-                  href="/"
+                  href="https://goo.gl/maps/cyqz1QdaBwMuhGZA7"
                   className="label-2 footer-link hover-underline"
                   target="_blank"
                 >
@@ -896,7 +986,7 @@ const HomeContent = () => {
         </div>
       </footer>
 
-      {<EventTimer/>}
+      {<EventTimer />}
 
       {/* <!-- 
     - #BACK TO TOP

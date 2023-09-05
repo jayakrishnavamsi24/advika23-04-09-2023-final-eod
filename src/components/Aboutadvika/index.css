@@ -1675,6 +1675,8 @@ html {
 .about-advika-description {
   font-weight: 100;
   font-size: 18px;
+  align-content: center;
+  font-family: "Cambria", Georgia, serif;
 }
 
 @media screen and (min-width: 575px) and (max-width: 992px) {

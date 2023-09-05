@@ -20,14 +20,6 @@ const EventDetailPage = (props) => {
       description: "(Poster Presentation)",
       aboutEvent:
         "Tech Postera, an engaging poster presentation event, offers participants a creative platform to showcase their technical insights. Hosted by AKNUCOE, this event fosters the exchange of innovative ideas and research findings. Tech Postera encourages you to visually articulate your work, sparking discussions and expanding horizons. Join us in celebrating the synergy of visual storytelling and technological exploration.",
-      guidelinesArray: [
-        "The competition is open to registered members of the event only.",
-        "Each team should consist of a maximum of two (2) members.",
-        'The presentation\'s content must adhere to the theme of "Embedded Web Technology."',
-        "Plagiarism of any kind will result in immediate disqualification.",
-        "The accepted format for presentations is A1 size with dimensions of 594 x 841 mm (or) 59.5 x 84.1 cm.",
-        "All presentations must be in the English language.",
-      ],
     },
     {
       cardNo: 3,
@@ -63,6 +55,30 @@ const EventDetailPage = (props) => {
       description: "(Project Expo)",
       aboutEvent:
         "Innovex, the captivating Project Expo, showcases a myriad of ingenious ideas and groundbreaking solutions. Held annually, this event gathers aspiring minds from diverse fields to present their innovative projects and prototypes. Innovex serves as a testament to the spirit of creativity and problem-solving, offering a platform to connect, learn, and be inspired by the ingenuity on display. Join us in exploring a world of innovation at Innovex, where ideas come to life and the future is unveiled.",
+    },
+    {
+      cardNo: 8,
+      title: "Photography",
+      description: "(Photography)",
+      aboutEvent: "/",
+    },
+    {
+      cardNo: 9,
+      title: "Chess",
+      description: "(Chess)",
+      aboutEvent: "/",
+    },
+    {
+      cardNo: 10,
+      title: "Flashmob",
+      description: "(Flashmob)",
+      aboutEvent: "/",
+    },
+    {
+      cardNo: 11,
+      title: "Culturals",
+      description: "(Culturals)",
+      aboutEvent: "/",
     },
   ];
 
@@ -165,8 +181,20 @@ const EventDetailPage = (props) => {
     case "6":
       eventData = allCardsList[5];
       break;
-    default:
+    case "7":
       eventData = allCardsList[6];
+      break;
+    case "8":
+      eventData = allCardsList[7];
+      break;
+    case "9":
+      eventData = allCardsList[8];
+      break;
+    case "10":
+      eventData = allCardsList[9];
+      break;
+    default:
+      eventData = allCardsList[10];
       break;
   }
 
@@ -254,45 +282,40 @@ const EventDetailPage = (props) => {
       </li>
       <li className="guideline-item">
         <p>
-        Each team should consist of a{" "}
+          Each team should consist of a{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
             maximum of two (2) members.
           </span>
         </p>
       </li>
       <li className="guideline-item">
-        <p>The presentation's content must adhere to the{" "}
+        <p>
+          The presentation's content must adhere to the{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-            theme 
+            theme
           </span>{" "}
           of{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-          "Embedded Web Technology"
+            "Embedded Web Technology"
           </span>
           .
         </p>
       </li>
       <li className="guideline-item">
-        <p>
-        Plagiarism of any kind will result in immediate disqualification.
-
-        </p>
+        <p>Plagiarism of any kind will result in immediate disqualification.</p>
       </li>
       <li className="guideline-item">
         <p>
-        The accepted format for presentations is{" "}
+          The accepted format for presentations is{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-          A1 size
-          </span>
-         {" "}with dimensions of 594 x 841 mm (or) 59.5 x 84.1 cm.
+            A1 size
+          </span>{" "}
+          with dimensions of 594 x 841 mm (or) 59.5 x 84.1 cm.
         </p>
       </li>
       <li className="guideline-item">
-        <p>
-        All presentations must be in the English language.
-        </p>
+        <p>All presentations must be in the English language.</p>
       </li>
-      
     </>
   );
 
@@ -303,49 +326,49 @@ const EventDetailPage = (props) => {
       </li>
       <li className="guideline-item">
         <p>
-        Only{" "}
+          Only{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-          individual participation
-          </span>
-          {" "}is allowed.
+            individual participation
+          </span>{" "}
+          is allowed.
         </p>
       </li>
       <li className="guideline-item">
         <p>
-        The event encompasses themes of{" "}
+          The event encompasses themes of{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-          Basic Concepts of Maths & Physics, Computer Basics, General
-Aptitude & Reasoning
+            Basic Concepts of Maths & Physics, Computer Basics, General Aptitude
+            & Reasoning
           </span>
           .
         </p>
       </li>
       <li className="guideline-item">
         <p>
-        The event comprises two rounds.{" "} 
-        <span className="guideline-hightlight" style={{ display: "inline" }}>
-        Rounds 1
-          </span>
-          {" "}is{" "}
+          The event comprises two rounds.{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-          written test
-          </span>
-          {" "}with a duration of{" "}
+            Rounds 1
+          </span>{" "}
+          is{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-        one hour
+            written test
+          </span>{" "}
+          with a duration of{" "}
+          <span className="guideline-hightlight" style={{ display: "inline" }}>
+            one hour
           </span>
-          . Participants
-scoring above the cutoff will proceed to the next round.
+          . Participants scoring above the cutoff will proceed to the next
+          round.
         </p>
       </li>
       <li className="guideline-item">
         <p>
           <span className="guideline-hightlight" style={{ display: "inline" }}>
             Round 2
-          </span>
-          {" "} involves a {" "}
+          </span>{" "}
+          involves a{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-          Rapid-Fire round
+            Rapid-Fire round
           </span>
           .
         </p>
@@ -353,12 +376,12 @@ scoring above the cutoff will proceed to the next round.
       <li className="guideline-item">
         <p>
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-          No electronic gadgets
-          </span>
-          {" "}  like calculators, smart phones etc. will be allowed at any stage of the event.
+            No electronic gadgets
+          </span>{" "}
+          like calculators, smart phones etc. will be allowed at any stage of
+          the event.
         </p>
       </li>
-     
     </>
   );
 
@@ -369,16 +392,16 @@ scoring above the cutoff will proceed to the next round.
       </li>
       <li className="guideline-item">
         <p>
-        Each team must consist of{" "}
+          Each team must consist of{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-          three (3) members
+            three (3) members
           </span>
           .
         </p>
       </li>
       <li className="guideline-item">
         <p>
-        The debate{" "}
+          The debate{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
             theme
           </span>{" "}
@@ -389,41 +412,48 @@ scoring above the cutoff will proceed to the next round.
         </p>
       </li>
       <li className="guideline-item">
-        <p>
-        The event comprises two rounds.
-        </p>
+        <p>The event comprises two rounds.</p>
       </li>
       <li className="guideline-item">
-          <span className="guideline-hightlight" style={{ display: "inline" }}>
-            Round 1: (Written Test)
-          </span>
-          <li className="sub-guideline-item">
-            <p>
-              Participants will be given{" "}
-            <span className="guideline-hightlight" style={{ display: "inline" }}>
-              one hour {" "}
+        <span className="guideline-hightlight" style={{ display: "inline" }}>
+          Round 1: (Written Test)
+        </span>
+        <li className="sub-guideline-item">
+          <p>
+            Participants will be given{" "}
+            <span
+              className="guideline-hightlight"
+              style={{ display: "inline" }}
+            >
+              one hour{" "}
             </span>
-            to {" "}
-            <span className="guideline-hightlight" style={{ display: "inline" }}>
-              write their views on the topic 
+            to{" "}
+            <span
+              className="guideline-hightlight"
+              style={{ display: "inline" }}
+            >
+              write their views on the topic
             </span>
             .
-            </p>
-          </li>
-          <li className="sub-guideline-item">
-            <p>
-              The written test format includes:
-              <li className="sub-sub-guideline-item">
-                <p>Opening Statement for either the Pro or Con side (as chosen by the participant).</p>
-              </li>
-              <li className="sub-sub-guideline-item">
-                <p>Ten (10) facts to support or oppose the chosen side.</p>
-              </li>
-              <li className="sub-sub-guideline-item">
-                <p>Conclusion summarizing their views.</p>
-              </li>
-            </p>
-          </li>
+          </p>
+        </li>
+        <li className="sub-guideline-item">
+          <p>
+            The written test format includes:
+            <li className="sub-sub-guideline-item">
+              <p>
+                Opening Statement for either the Pro or Con side (as chosen by
+                the participant).
+              </p>
+            </li>
+            <li className="sub-sub-guideline-item">
+              <p>Ten (10) facts to support or oppose the chosen side.</p>
+            </li>
+            <li className="sub-sub-guideline-item">
+              <p>Conclusion summarizing their views.</p>
+            </li>
+          </p>
+        </li>
       </li>
       <li className="guideline-item">
         <p>
@@ -433,11 +463,12 @@ scoring above the cutoff will proceed to the next round.
       <li className="guideline-item">
         <p>
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-            Round 2:
+            Second Round:
           </span>
           <li className="guideline-item margin">
             <p>
-              The second round will involve one team debating against another team.
+              The second round will involve one team debating against another
+              team.
             </p>
           </li>
         </p>
@@ -449,47 +480,35 @@ scoring above the cutoff will proceed to the next round.
           </span>
           <ul>
             <li className="numbers-list">
-              <p>
-              Team Introductions (2 minutes)
-              </p>
+              <p>Team Introductions (2 minutes)</p>
             </li>
             <li className="numbers-list">
-              <p>
-              Pro Speaker (up to three (3) minutes):
-              </p>
-              <ul>
-              <li className="sub-sub-guideline-item">
-                <p>All three team members must participate.</p>
-              </li>
-              </ul>
-            </li>
-            <li className="numbers-list">
-              <p>
-              Con Speaker (up to three (3) minutes):
-              </p>
+              <p>Pro Speaker (up to three (3) minutes):</p>
               <ul>
                 <li className="sub-sub-guideline-item">
                   <p>All three team members must participate.</p>
                 </li>
-              </ul>              
+              </ul>
             </li>
             <li className="numbers-list">
-              <p>
-              Pro Rebuttal (up to two (2) minutes)
-              </p>
+              <p>Con Speaker (up to three (3) minutes):</p>
+              <ul>
+                <li className="sub-sub-guideline-item">
+                  <p>All three team members must participate.</p>
+                </li>
+              </ul>
             </li>
             <li className="numbers-list">
-              <p>
-              Con Rebuttal (up to two (2) minutes)
-              </p>
+              <p>Pro Rebuttal (up to two (2) minutes)</p>
             </li>
-          </ul>          
+            <li className="numbers-list">
+              <p>Con Rebuttal (up to two (2) minutes)</p>
+            </li>
+          </ul>
         </p>
       </li>
       <li className="guideline-item">
-        <p>
-        The debate will be conducted in English only
-        </p>
+        <p>The debate will be conducted in English only</p>
       </li>
     </>
   );
@@ -503,95 +522,94 @@ scoring above the cutoff will proceed to the next round.
         <p>
           The{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-         theme
-          </span>
-          {" "} and content should demonstrate {""}
+            theme
+          </span>{" "}
+          and content should demonstrate {""}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-          ‘Interview’
+            ‘Interview’
           </span>
           .
-
         </p>
       </li>
       <li className="guideline-item">
         <p>
-        Films must adhere to the specified {" "}
+          Films must adhere to the specified{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-          maximum
+            maximum
           </span>{" "}
           duration i.e.,{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-          5 minutes, excluding opening and closing
-credits
-
+            5 minutes, excluding opening and closing credits
           </span>
           .
         </p>
       </li>
       <li className="guideline-item">
         <p>
-        The allowed {" "}
-        <span className="guideline-hightlight" style={{ display: "inline" }}>
-            genre
-          </span>
-          {" "} is {" "}
+          The allowed{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-          melodrama
+            genre
+          </span>{" "}
+          is{" "}
+          <span className="guideline-hightlight" style={{ display: "inline" }}>
+            melodrama
           </span>
           .
         </p>
       </li>
       <li className="guideline-item">
         <p>
-        Films should be in any of the specified language (Telugu, Hindi and English) or include subtitles if needed.
+          Films should be in any of the specified language (Telugu, Hindi and
+          English) or include subtitles if needed.
         </p>
       </li>
       <li className="guideline-item">
         <p>
-        Plagiarism is strictly prohibited; all content must be original or properly attributed.
-          
+          Plagiarism is strictly prohibited; all content must be original or
+          properly attributed.
         </p>
       </li>
       <li className="guideline-item">
         <p>
-        Submit the film in the specified{" "}
+          Submit the film in the specified{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
             file format
           </span>{" "}
-          {" "}  (e.g., {" "}
+          (e.g.,{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-          MP4, MOV
+            MP4, MOV
           </span>{" "}
           ).
         </p>
       </li>
       <li className="guideline-item">
         <p>
-        Video quality should be{" "}
-        <span className="guideline-hightlight" style={{ display: "inline" }}>
-        720p or 1080p
-          </span>
-          .
-           </p>
-      </li>
-      <li className="guideline-item">
-        <p>
-        The submission {" "}
-        <span className="guideline-hightlight" style={{ display: "inline" }}>
-        deadline is at 12:00 PM September 13, 2023
+          Video quality should be{" "}
+          <span className="guideline-hightlight" style={{ display: "inline" }}>
+            720p or 1080p
           </span>
           .
         </p>
       </li>
       <li className="guideline-item">
         <p>
-        Opening and closing credits with essential details (film title, director, cast, crew, music credits, etc.) must
-be included.
+          The submission{" "}
+          <span className="guideline-hightlight" style={{ display: "inline" }}>
+            deadline is at 12:00 PM September 13, 2023
+          </span>
+          .
         </p>
       </li>
       <li className="guideline-item">
         <p>
-        The organizers have the right to screen the films during the event or for promotional purposes.
+          Opening and closing credits with essential details (film title,
+          director, cast, crew, music credits, etc.) must be included.
+        </p>
+      </li>
+      <li className="guideline-item">
+        <p>
+          The organizers have the right to screen the films during the event or
+          for promotional purposes.
         </p>
       </li>
     </>
@@ -604,13 +622,14 @@ be included.
       </li>
       <li className="guideline-item">
         <p>
-        The presentation theme must involve an innovative idea supported by a well-defined working
-hypothesis.
+          The presentation theme must involve an innovative idea supported by a
+          well-defined working hypothesis.
         </p>
       </li>
       <li className="guideline-item">
         <p>
-        Plagiarism is strictly prohibited. All content must be original or properly cited.
+          Plagiarism is strictly prohibited. All content must be original or
+          properly cited.
         </p>
       </li>
       <li className="guideline-item">
@@ -626,7 +645,7 @@ hypothesis.
         <p>
           Presentations must be in the PowerPoint{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-            (PPT/PPTX) {" "}
+            (PPT/PPTX){" "}
           </span>
           format.
         </p>
@@ -645,13 +664,12 @@ hypothesis.
         </p>
       </li>
       <li className="guideline-item">
-        <p>
-          The presentation must be conducted in English.
-        </p>
+        <p>The presentation must be conducted in English.</p>
       </li>
       <li className="guideline-item">
         <p>
-          Participants should bring their presentation on a pen drive for technical setup.
+          Participants should bring their presentation on a pen drive for
+          technical setup.
         </p>
       </li>
     </>
@@ -666,33 +684,73 @@ hypothesis.
         <p>
           Create an attractive{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
-          visual display (Poster)
+            visual display (Poster)
           </span>{" "}
-          for your project. 
+          for your project.
+        </p>
+      </li>
+      <li className="guideline-item">
+        <p>A maximum of 4 persons per project are allowed for participation.</p>
+      </li>
+      <li className="guideline-item">
+        <p>
+          Every project will be given stipulated time to explain to judges for
+          successful evaluation.
         </p>
       </li>
       <li className="guideline-item">
         <p>
-          Follow all provided guidelines to ensure a successful Expo experience. 
+          Follow all provided guidelines to ensure a successful Expo experience.
         </p>
       </li>
       <li className="guideline-item">
         <p>
           <span className="guideline-hightlight" style={{ display: "inline" }}>
             Participants
-          </span>
-          {" "}must{" "}
+          </span>{" "}
+          must{" "}
           <span className="guideline-hightlight" style={{ display: "inline" }}>
             bring their own equipment
-          </span>
-          {" "}for the project display, extension cords etc and ensure
-its compatibility, reliability, and safety.
+          </span>{" "}
+          for the project display, extension cords etc and ensure its
+          compatibility, reliability, and safety.
         </p>
       </li>
       <li className="guideline-item">
         <p>
-        Participants must label, secure, set up, and remove their equipment within the given time and space.
+          Participants must label, secure, set up, and remove their equipment
+          within the given time and space.
         </p>
+      </li>
+      <li className="guideline-item">
+        <p>
+          <span className="guideline-hightlight" style={{ display: "inline" }}>
+            TIMINGS:
+          </span>{" "}
+          The project to be displayed on
+          <span className="guideline-hightlight" style={{ display: "inline" }}>
+            {" "}
+            14.09.2023 @2:30PM
+          </span>
+        </p>
+        <li className="guideline-item">
+          <p>
+            <span
+              className="guideline-hightlight"
+              style={{ display: "inline" }}
+            >
+              Judge's evaluation
+            </span>{" "}
+            and presentation to be conducted on
+            <span
+              className="guideline-hightlight"
+              style={{ display: "inline" }}
+            >
+              {" "}
+              15.09.2023 @10:00am
+            </span>
+          </p>
+        </li>
       </li>
     </>
   );
@@ -711,7 +769,7 @@ its compatibility, reliability, and safety.
         return getPicturePerfectData();
       case "6":
         return getIdeaNovaData();
-      default:
+      case "7":
         return getInnovexData();
     }
   };
@@ -740,7 +798,7 @@ its compatibility, reliability, and safety.
 
           <div className="topbar-item item-2">
             <div className="icon">
-            <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+              <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
             </div>
 
             <span className="span">September 14 & 15, 2023</span>
@@ -774,7 +832,7 @@ its compatibility, reliability, and safety.
         <div className="container">
           <a href="/" className="logo">
             <img
-              src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1693133777/Advika_Logo-cropped_ptohco.png"
+              src="https://res.cloudinary.com/die4jnqbu/image/upload/v1693833635/logo_ud5oqm.jpg"
               className="advika-logo-img"
               alt="Grilli - Home"
             />
@@ -791,7 +849,7 @@ its compatibility, reliability, and safety.
 
             <a href="/" className="logo">
               <img
-                src="https://res.cloudinary.com/dxq3pj438/image/upload/v1691839571/logo-1_jbqbj0.png"
+                src="https://res.cloudinary.com/die4jnqbu/image/upload/v1693833635/logo_ud5oqm.jpg"
                 width="160"
                 height="50"
                 alt="Grilli - Home"
@@ -805,7 +863,7 @@ its compatibility, reliability, and safety.
 
                   <span className="span">Home</span>
                 </a>
-              </li>            
+              </li>
 
               <li className="navbar-item">
                 <a href="/#about" className="navbar-link hover-underline">
@@ -861,17 +919,14 @@ its compatibility, reliability, and safety.
               <div className="separator"></div>
 
               <p className="contact-label">Register</p>
-
-              <a
-                href="tel:+88123123456"
-                className="body-1 contact-number hover-underline"
-              >
-                +1 1234567890
-              </a>
             </div>
           </nav>
 
-          <a href="/" className="btn btn-secondary">
+          <a
+            href="https://forms.gle/CC4CVUb3N46Uxe9T6"
+            target="_blank"
+            className="btn btn-secondary"
+          >
             <span className="text text-1">Register Here</span>
 
             <span className="text text-2" aria-hidden="true">

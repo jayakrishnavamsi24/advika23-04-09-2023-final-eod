@@ -86,7 +86,7 @@ const Aboutadvika = () => {
     <div className="about-advika-page-container">
       <div className="preload loaded" data-preaload>
         <div className="circle"></div>
-        <p className="text">Advika 2K23</p>
+        <p className="text">Advika'23</p>
       </div>
       {/* <!-- 
       - #TOP BAR
@@ -228,17 +228,14 @@ const Aboutadvika = () => {
               <div className="separator"></div>
 
               <p className="contact-label">Register</p>
-
-              <a
-                href="tel:+88123123456"
-                className="body-1 contact-number hover-underline"
-              >
-                +1 1234567890
-              </a>
             </div>
           </nav>
 
-          <a href="/" className="btn btn-secondary">
+          <a
+            href="https://forms.gle/CC4CVUb3N46Uxe9T6"
+            target="_blank"
+            className="btn btn-secondary"
+          >
             <span className="text text-1">Register Here</span>
 
             <span className="text text-2" aria-hidden="true">
@@ -321,7 +318,8 @@ const Aboutadvika = () => {
         className="about-advika-footer"
       >
         <p className="copyright">
-          &copy; 2023 Advika. All Rights Reserved | Crafted by Department of Computer Science and Engineering
+          &copy; 2023 Advika. All Rights Reserved | Crafted by Department of
+          Computer Science and Engineering
           {/* <a
             href="https://github.com/deepakramu7"
             target="_blank"

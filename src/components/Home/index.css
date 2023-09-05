@@ -288,9 +288,7 @@ html {
   .margin-top-events-section {
     margin-top: -70px;
   }
-
 }
-
 
 /*-----------------------------------*\
   #REUSED STYLE
@@ -347,8 +345,6 @@ html {
 .text-center {
   text-align: center;
 }
-
-
 
 .img-cover {
   width: 100%;
@@ -784,6 +780,7 @@ html {
   max-width: max-content;
   margin-inline: auto;
   margin-block-end: 60px;
+  
 }
 
 .navbar-list {
@@ -1240,9 +1237,7 @@ html {
     /* margin-left: 20px;
     margin-right: 20px; */
   }
-
 }
-
 
 /*-----------------------------------*\
   #SPECIAL DISH

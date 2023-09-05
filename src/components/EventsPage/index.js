@@ -18,6 +18,10 @@ const EventsPage = (props) => {
       description: "(Innovative idea with hypothesis)",
     },
     { cardNo: 7, title: "Innovex", description: "(Project Expo)" },
+    { cardNo: 8, title: "Photography", description: "(Photography)" },
+    { cardNo: 9, title: "Chess", description: "(Chess)" },
+    { cardNo: 10, title: "Flashmob", description: "(Flashmob)" },
+    { cardNo: 11, title: "Culturals", description: "(Culturals)" },
   ];
 
   useEffect(() => {
@@ -102,16 +106,24 @@ const EventsPage = (props) => {
   const { id } = props.match.params;
   switch (id) {
     case "technical":
-      title = "Technical Events";
-      visibleEvents = [allCardsList[0], allCardsList[1], allCardsList[2]];
+      title = "Main Events";
+      visibleEvents = [
+        allCardsList[0],
+        allCardsList[2],
+        allCardsList[6],
+        allCardsList[1],
+        allCardsList[5],
+        allCardsList[3],
+        allCardsList[4],
+      ];
       break;
     case "non-technical":
-      title = "Non-Tech Events";
-      visibleEvents = [allCardsList[3], allCardsList[4]];
+      title = "Games Gala";
+      visibleEvents = [allCardsList[7], allCardsList[8]];
       break;
     default:
-      title = "Extra-curricular Events";
-      visibleEvents = [allCardsList[5], allCardsList[6]];
+      title = "Cultural Enigma";
+      visibleEvents = [allCardsList[9], allCardsList[10]];
       break;
   }
 
@@ -185,7 +197,7 @@ const EventsPage = (props) => {
         <div className="container">
           <a href="/" className="logo">
             <img
-              src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1693133777/Advika_Logo-cropped_ptohco.png"
+              src="https://res.cloudinary.com/die4jnqbu/image/upload/v1693833635/logo_ud5oqm.jpg"
               className="advika-logo-img"
               alt="Grilli - Home"
             />
@@ -202,7 +214,7 @@ const EventsPage = (props) => {
 
             <a href="/" className="logo">
               <img
-                src="https://res.cloudinary.com/jayakrishnavamsi/image/upload/v1693133777/Advika_Logo-cropped_ptohco.png"
+                src="https://res.cloudinary.com/die4jnqbu/image/upload/v1693833635/logo_ud5oqm.jpg"
                 width="160"
                 height="50"
                 alt="Grilli - Home"
@@ -263,26 +275,23 @@ const EventsPage = (props) => {
               </p>
 
               <a
-                href="mailto:booking@grilli.com"
+                href="mailto:advika2k23@aknu.edu.in"
                 className="body-4 sidebar-link"
               >
-                advika@gmail.com
+                advika2k23@aknu.edu.in
               </a>
 
               <div className="separator"></div>
 
               <p className="contact-label">Register</p>
-
-              <a
-                href="tel:+88123123456"
-                className="body-1 contact-number hover-underline"
-              >
-                +1 1234567890
-              </a>
             </div>
           </nav>
 
-          <a href="/" className="btn btn-secondary">
+          <a
+            href="https://forms.gle/CC4CVUb3N46Uxe9T6"
+            target="_blank"
+            className="btn btn-secondary"
+          >
             <span className="text text-1">Register Here</span>
 
             <span className="text text-2" aria-hidden="true">

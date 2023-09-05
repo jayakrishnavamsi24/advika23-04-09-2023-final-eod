@@ -1,35 +1,103 @@
 .timer-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 50%;
-    max-width: 400px;
-    background-color: hsl(38, 61%, 73%);
-    z-index: 100;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    padding: 7px;
-    border-radius: 15px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  max-width: 550px;
+  background-color: black;
+  z-index: 100;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 7px;
+  border-radius: 15px;
 }
 
 .timer-title {
-    color: black;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
 
 .timerr {
-    font-size: 20px;
-    text-align: center;
-    color: green;
+  font-size: 20px;
+  text-align: center;
+  /* display: inline; */
 }
 
-@media screen and (min-width: 768px) {
-    .timer-container{
-        display: flex;
-        justify-content: center;
-    }
+.red-color {
+  color: red;
+}
 
-    .timerr {
-        margin-left: 20px;
-    }
+.green-color {
+  color: rgb(181, 211, 10);
+}
+
+/* .timerr > span {
+  display: inline;
+} */
+
+.glow {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  max-width: 550px;
+  z-index: 100;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 7px;
+  border-radius: 15px;
+  height: 75px;
+}
+
+.glow::before, .glow::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #e6fb04,#ff6600, #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff);
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  border-radius: 15px;
+  z-index: -1;
+  animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+  0%{
+      background-position: 0 0;
+  }
+  50% {
+      background-position: 400% 0;
+  }
+  100% {
+      background-position: 0 0;
+  }
+}
+
+.glow::after {
+  filter: blue(40px);
+}
+
+
+@media screen and (min-width: 860px) {
+  .timer-container{
+      display: flex;
+      justify-content: center;
+      /* height: 50px; */
+      padding: 10px;
+  }
+
+  .glow {
+      height: 50px;
+  }
+
+  .timer-title {
+      font-size: 20px;
+  }
+
+  .timerr {
+      margin-left: 20px;
+      font-size: 30px;
+  }
 }

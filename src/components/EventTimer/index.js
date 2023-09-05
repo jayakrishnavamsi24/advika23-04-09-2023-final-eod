@@ -10,11 +10,16 @@ class EventTimer extends Component {
     }
   
     componentDidMount() {
-      const countDownDate = new Date("Sep 15, 2023 10:00:00").getTime();
+      const countDownDate = new Date("Sep 14, 2023 10:00:00").getTime();
       this.timerInterval = setInterval(() => {
         const now = new Date().getTime();
         const distance = countDownDate - now;
-        this.setState({ distance });
+        if(distance < 0) {
+          this.setState({distance: 0})
+        }
+        else {
+          this.setState({ distance });
+        }
       }, 1000);
     }
   
@@ -24,15 +29,18 @@ class EventTimer extends Component {
   
     render() {
       const {distance} = this.state 
+      const styleColor = (distance === 0) ? "red-color" : "green-color"
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       return (
-        <div className="timer-container">
-          <p className='timer-title'> Event Starts In : </p>
-          <h1 className='timerr'>{days}d:{hours}h:{minutes}m:{seconds}s</h1>
+        <div className='glow'>
+          <div className="timer-container">
+            <p className='timer-title'> Event Starts In : </p>
+            <h1 className={`timerr ${styleColor}`}>{days}d:{hours}h:{minutes}m:{seconds}s</h1>
+          </div>
         </div>
       );
     }
@@ -40,4 +48,3 @@ class EventTimer extends Component {
   
 
 export default EventTimer
-
